@@ -33,4 +33,6 @@ app.post('/opinions', async (request, response) => {
   return response.json(opinionCreated);
 });
 
-app.listen(process.env.PORT || 3333);
+const PORT: string | number = process.env.PORT || 3333;
+
+app.listen(PORT);
