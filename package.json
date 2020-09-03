@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node src/server.js",
     "build": "tsc",
-    "postinstall": "npm run build"
+    "postinstall": "yarn build"
   },
   "devDependencies": {
     "@types/cors": "^2.8.7",
