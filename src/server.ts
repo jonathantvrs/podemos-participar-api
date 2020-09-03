@@ -11,14 +11,15 @@ const app = express();
 mongoose.connect(
   process.env.MONGO_URL,
   {
-    useNewUrlParser: true
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
   }
 );
 
 app.use(cors())
 app.use(express.json());
 
-app.post('opinions', async (request, response) => {
+app.post('/opinions', async (request, response) => {
   const { opinion } = request.body;
 
   const opinionCreated = await Opinion.create({

@@ -1,5 +1,9 @@
 import mongoose from 'mongoose';
 
+interface IOpinion extends mongoose.Document {
+  opinion: string;
+}
+
 const OpinionSchema = new mongoose.Schema({
   opinion: String,
   createdAt: {
@@ -8,4 +12,4 @@ const OpinionSchema = new mongoose.Schema({
   }
 })
 
-export default mongoose.model("Opinion", OpinionSchema);
+export default mongoose.model<IOpinion>("Opinion", OpinionSchema);
