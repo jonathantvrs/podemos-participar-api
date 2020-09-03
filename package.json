@@ -6,8 +6,7 @@
   "scripts": {
     "start": "node src/server.js",
     "build": "tsc",
-    "postinstall": "npm run build",
-    "dev": "tsnd --transpile-only --ignore-watch node_modules --respawn src/server.ts"
+    "postinstall": "npm run build"
   },
   "devDependencies": {
     "@types/cors": "^2.8.7",
