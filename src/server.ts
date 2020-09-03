@@ -19,6 +19,10 @@ mongoose.connect(
 app.use(cors())
 app.use(express.json());
 
+app.get('/opinions', (request, response) => {
+  return response.json({ message: 'GET success' })
+})
+
 app.post('/opinions', async (request, response) => {
   const { opinion } = request.body;
 
