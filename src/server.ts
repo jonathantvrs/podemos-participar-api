@@ -15,7 +15,7 @@ mongoose.connect(
   }
 );
 
-app.use(cors({ origin: 'https://podemos-bot.herokuapp.com/' }))
+app.use(cors())
 app.use(express.json());
 
 app.post('opinions', async (request, response) => {
